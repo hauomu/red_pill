@@ -1,0 +1,82 @@
+Generating enhanced monthly feedback analysis...
+
+✅ Loaded: 151,023 rows
+✅ Feedback records: 53,007
+
+============================================================================================================================================
+COMPLAINT CATEGORIES DISTRIBUTION
+============================================================================================================================================
+  Late Delivery: 1,823 (49.1%)
+  No Comment: 519 (14.0%)
+  Driver Behavior: 512 (13.8%)
+  Other: 466 (12.5%)
+  Package Damage: 214 (5.8%)
+  Poor Communication: 182 (4.9%)
+
+============================================================================================================================================
+VEHICLE TYPE CORRELATION WITH COMPLAINTS
+============================================================================================================================================
+complaint_category  Driver Behavior  Late Delivery  ...  Poor Communication   All
+vehicle_type                                        ...                          
+Bike                              2              1  ...                   3     7
+VAN                               3              2  ...                   2     9
+bike                            154            548  ...                  59  1123
+truck                            39            174  ...                  16   337
+truck                             0              1  ...                   0     2
+van                             292           1026  ...                  95  2091
+All                             490           1752  ...                 175  3569
+
+[7 rows x 7 columns]
+
+============================================================================================================================================
+MONTHLY ANALYSIS BY PRIORITY LEVEL
+============================================================================================================================================
+
+📅 2025-11:
+  VIP        - Avg Rating: 4.76 | Negative:   0 (0.0%)
+  Premium    - Avg Rating: 4.58 | Negative:   4 (5.6%)
+  Express    - Avg Rating: 4.47 | Negative:   5 (2.9%)
+  Standard   - Avg Rating: 4.49 | Negative:  11 (3.9%)
+
+📅 2025-12:
+  VIP        - Avg Rating: 4.61 | Negative:   8 (2.2%)
+  Premium    - Avg Rating: 4.61 | Negative:  23 (1.9%)
+  Express    - Avg Rating: 4.53 | Negative:  93 (3.8%)
+  Standard   - Avg Rating: 4.43 | Negative: 268 (5.2%)
+
+📅 2026-01:
+  VIP        - Avg Rating: 4.56 | Negative:  11 (3.1%)
+  Premium    - Avg Rating: 4.54 | Negative:  32 (2.8%)
+  Express    - Avg Rating: 4.49 | Negative:  96 (3.8%)
+  Standard   - Avg Rating: 4.36 | Negative: 297 (6.0%)
+
+📅 2026-02:
+  VIP        - Avg Rating: 4.42 | Negative:  13 (4.3%)
+  Premium    - Avg Rating: 4.47 | Negative:  30 (3.0%)
+  Express    - Avg Rating: 4.39 | Negative: 116 (5.3%)
+  Standard   - Avg Rating: 4.28 | Negative: 351 (7.6%)
+
+📅 2026-03:
+  VIP        - Avg Rating: 4.50 | Negative:  10 (3.1%)
+  Premium    - Avg Rating: 4.41 | Negative:  42 (3.7%)
+  Express    - Avg Rating: 4.36 | Negative: 131 (5.4%)
+  Standard   - Avg Rating: 4.18 | Negative: 458 (8.8%)
+
+📅 2026-04:
+  VIP        - Avg Rating: 4.37 | Negative:  17 (5.2%)
+  Premium    - Avg Rating: 4.30 | Negative:  72 (6.3%)
+  Express    - Avg Rating: 4.25 | Negative: 182 (7.6%)
+  Standard   - Avg Rating: 4.08 | Negative: 591 (11.3%)
+
+📅 2026-05:
+  VIP        - Avg Rating: 4.31 | Negative:  15 (5.1%)
+  Premium    - Avg Rating: 4.25 | Negative:  58 (5.8%)
+  Express    - Avg Rating: 4.19 | Negative: 177 (7.9%)
+  Standard   - Avg Rating: 3.98 | Negative: 605 (13.2%)
+
+✅ File saved: data_exports/Monthly_Feedback_Enhanced.xlsx
+
+📊 Sheets created:
+   1. Priority Breakdown - Ratings by priority level per month
+   2. Complaint Categories - Distribution of complaint types
+   3. Vehicle Correlation - Complaints by vehicle type

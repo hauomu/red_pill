@@ -1,0 +1,23 @@
+# AIAP24 Assessment - ML Pipeline Dependencies
+
+# Data processing
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Machine learning
+scikit-learn>=1.0.0
+
+# Configuration
+PyYAML>=5.4.0
+
+# Jupyter (for EDA only)
+jupyter>=1.0.0
+notebook>=6.0.0
+
+# Visualization (for EDA)
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scipy>=1.7.0
+
+# Utilities
+openpyxl>=3.6.0  # For reading Excel files

@@ -1,0 +1,71 @@
+# AIAP24 ML Pipeline Configuration
+# Configure model, hyperparameters, data settings, and output locations
+
+database:
+  # Primary data source (SQLite)
+  path: ./data/delivery.db
+
+features:
+  # Feature columns for model training
+  # Sourced from deliveries table
+  feature_cols:
+    - branch              # Depot location
+    - delivery_priority   # Service tier
+    - vehicle_type        # Vehicle category
+    - distance_km         # Distance
+    - num_stops_on_route  # Route complexity
+    - driver_experience_months  # Driver experience
+  
+  # Target column
+  target_col: rating
+  
+  # Binary threshold for target (rating >= threshold = 1, else 0)
+  target_threshold: 4.0
+  
+  # Missing value imputation strategy: mean | median | zero
+  imputation_strategy: mean
+
+data:
+  # Train/test split proportion
+  test_size: 0.2
+  # Stratified split by target variable
+  stratify: true
+  # Random seed for reproducibility
+  random_state: 42
+
+model:
+  # Model type: logistic_regression | random_forest | gradient_boosting
+  type: logistic_regression
+  
+  # Hyperparameters (passed to model constructor)
+  hyperparams:
+    # Logistic Regression (default)
+    max_iter: 1000
+    random_state: 42
+    solver: lbfgs
+    
+    # For Random Forest, use:
+    # n_estimators: 100
+    # max_depth: 10
+    # random_state: 42
+    # min_samples_split: 5
+    # min_samples_leaf: 2
+    
+    # For Gradient Boosting, use:
+    # n_estimators: 100
+    # learning_rate: 0.1
+    # max_depth: 5
+    # random_state: 42
+    # min_samples_split: 5
+    # min_samples_leaf: 2
+
+output:
+  # Directory for saving results
+  results_dir: ./results
+  # Save trained model
+  save_model: true
+  model_path: ./results/model.pkl
+  # Save evaluation results
+  results_file: evaluation_results.json
+  # Save pipeline log
+  log_file: pipeline.log
